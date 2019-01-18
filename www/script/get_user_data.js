@@ -29,7 +29,7 @@ function getUserData(result) { // функция, обрабатывающая �
     document.querySelector('#signup-name').value = result.name;
     document.querySelector('#signup-pass').value = result.password;
     document.querySelector('#signup-birthday').value = result.birthday;
-    document.querySelector(".title-user-cabinet__name").innerHTML = result.name;
+    document.querySelector(".title-user-cabinet__name").innerHTML = result.name; //записываем имя пользователя в заголовок
 }
 
 document.querySelector('#signup-submit').onclick = function (event) { // по клику запускаем функцию
