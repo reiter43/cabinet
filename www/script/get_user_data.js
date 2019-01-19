@@ -1,5 +1,12 @@
-//СКРИПТ ДЛЯ ИЗМЕНЕНИЯ ДАННЫХ ПОЛЬЗОВАТЕЛЯ  (с помощью куки вытаскиваем все данные пользователя, которому куки принадлежит )
+//Инициализация календаря (взято из materialise)
+document.addEventListener('DOMContentLoaded', function () {
+    let elems = document.querySelectorAll('.datepicker');
+    let instances = M.Datepicker.init(elems, {
+        "format": "dd-mm-yyyy"
+    });
+});
 
+//СКРИПТ ДЛЯ ИЗМЕНЕНИЯ ДАННЫХ ПОЛЬЗОВАТЕЛЯ  (с помощью куки вытаскиваем все данные пользователя, которому куки принадлежит )
 let userEmail = getCookie('email');
 console.log(userEmail);
 ajax('core/get_user_data.php', 'POST', getUserData, {
@@ -7,11 +14,11 @@ ajax('core/get_user_data.php', 'POST', getUserData, {
 }); // посылаем запрос на сервер для получения оттуда данных
 
 function getCookie(cname) { // функция, позволяющия вычитать из куки определенные данные ( в нашем случае сам эл. адрес)
-    var name = cname + "=";
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
         while (c.charAt(0) == ' ') {
             c = c.substring(1);
         }
@@ -29,7 +36,8 @@ function getUserData(result) { // функция, обрабатывающая �
     document.querySelector('#signup-name').value = result.name;
     document.querySelector('#signup-pass').value = result.password;
     document.querySelector('#signup-birthday').value = result.birthday;
-    document.querySelector(".title-user-cabinet__name").innerHTML = result.name;
+    document.querySelector(".title-user-cabinet__name").innerHTML = result.name; //записываем имя пользователя в заголовок
+    M.updateTextFields(); // метод очистки полей,чтобы label не налазил на значение
 }
 
 document.querySelector('#signup-submit').onclick = function (event) { // по клику запускаем функцию
@@ -54,11 +62,15 @@ document.querySelector('#signup-submit').onclick = function (event) { // по к
 }
 
 function updateUserData(result) { // функция, обрабатывающая ответ сервера
-    console.log(result); 
-      if (result == 1) {       
-        alert('Данные успешно обновлены!');
-        location.reload(); 
+    console.log(result);
+    if (result == 1) {
+        M.toast({
+            html: 'Данные успешно обновлены!'
+        })
+        document.querySelector(".title-user-cabinet__name").innerHTML = document.querySelector('#signup-name').value
     } else {
-        alert('ошибка обновления');
+        M.toast({
+            html: 'Ошибка обновления'
+        })
     }
 }
