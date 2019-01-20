@@ -64,13 +64,9 @@ document.querySelector('#signup-submit').onclick = function (event) { // по к
 function updateUserData(result) { // функция, обрабатывающая ответ сервера
     console.log(result);
     if (result == 1) {
-        M.toast({
-            html: 'Данные успешно обновлены!'
-        })
-        document.querySelector(".title-user-cabinet__name").innerHTML = document.querySelector('#signup-name').value
+        chips('Данные успешно обновлены!', 1500)
+        document.querySelector(".title-user-cabinet__name").innerHTML = document.querySelector('#signup-name').value // перезаписываем новое имя пользователя в заголовок
     } else {
-        M.toast({
-            html: 'Ошибка обновления'
-        })
+        chips('Ошибка обновления', 1500)
     }
 }

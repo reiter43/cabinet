@@ -20,6 +20,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="libs/materialize/css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/chips.css" />
 
 
 </head>
@@ -101,6 +102,7 @@
     <script src="script/ajax.js"></script>
     <script src="script/get_user_data.js"></script>
     <script src="script/logout.js"></script>
+    <script src="script/chips.js"></script>
 </body>
 
 </html>
