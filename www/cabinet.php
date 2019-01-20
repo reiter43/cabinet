@@ -20,13 +20,14 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="libs/materialize/css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/chips.css" />
 
 
 </head>
 
 <body>
 
-    <div class="container">
+    <div class="container ">
         <div class="row">
             <div class="col l12 center-align">
                 <h1 class="title-user-cabinet">
@@ -58,7 +59,7 @@
                             <input id="signup-birthday" type="text" class="datepicker">
                             <label class="active" for="signup-birthday">Birthday</label>
                         </div>
-                        <div class="col l12 ">
+                        <div class="col l6 ">
                             <p>
                                 <label>
                                     <input class="with-gap sex" name="sex" value="male" type="radio" checked />
@@ -101,6 +102,7 @@
     <script src="script/ajax.js"></script>
     <script src="script/get_user_data.js"></script>
     <script src="script/logout.js"></script>
+    <script src="script/chips.js"></script>
 </body>
 
 </html>
