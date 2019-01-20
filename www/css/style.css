@@ -1,8 +1,32 @@
-.title-user-cabinet{
+.title-user-cabinet,
+.title__header {
   font-size: 24px;
 }
 
-.title-user-cabinet__name{
+.title-user-cabinet__name {
   font-weight: bold;
 }
 
+/*Стилизация всплывающего окна*/
+.chipp {
+  position: absolute;
+  right: 300px;
+  top: 200px;
+  display: inline-block;
+  padding: 0 10px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, .5);
+  color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+/************************************************/
+
+.header{
+  border-bottom: 1px solid #26a69a;
+}

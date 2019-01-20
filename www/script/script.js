@@ -1,3 +1,11 @@
+//Инициализация календаря (взято из materialise)
+document.addEventListener('DOMContentLoaded', function () {
+    let elems = document.querySelectorAll('.datepicker');
+    let instances = M.Datepicker.init(elems, {
+        "format": "dd-mm-yyyy"
+    });
+});
+
 // СКРИПТ ДЛЯ ФОРМЫ РЕГИТРАЦИИ
 document.querySelector('#signup-submit').onclick = function (event) { //вешаем на  клик по кнопке регистрации функцию
     event.preventDefault(); // команда, останавливающая стандартную обработку формы и перезагрузку страницы

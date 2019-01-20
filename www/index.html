@@ -1,34 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+
+    <link rel="shortcut icon" href="img/fav/user.png" type="image/png">
+
+    <title>Сайт</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="libs/materialize/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+
 </head>
 
 <body>
-
-    <form method="POST">
-        <div>name: <input type="text" name="name" id="signup-name"></div>
-        <div>password: <input type="text" name="pass" id="signup-pass"></div>
-        <div>email: <input type="text" name="email" id="signup-email"></div>
-        <div>birthday: <input type="text" name="birthday" id="signup-birthday"></div>
-        <div>sex:
-            <div> <input type="radio" value="male" name="sex" checked class="sex">male</div>
-            <div><input type="radio" value="female" name="sex" class="sex">female</div>
-            <div><input type="radio" value="other" name="sex" class="sex">other</div>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col l10">
+                    <h1 class="title__header center-align">Итоговый проект</h1>
+                    <div class="col l2"></div>
+                </div>
+            </div>
         </div>
-        <input type="submit" value="send" id="signup-submit">
+
+    </header>
+
+    <form>
+        <div class="row">
+            <div class="input-field col l12">
+                <input placeholder="Введите ваше имя" id="signup-name" type="text" class="validate" name="name">
+                <label class="active" for="signup-name">Name</label>
+            </div>
+            <div class="input-field col l12">
+                <input placeholder="Введите ваш пароль" id="signup-pass" type="password" name="pass">
+                <label class="active" for="signup-pass">Password</label>
+            </div>
+            <div class="input-field col l12">
+                <input placeholder="Введите ваш email" id="signup-email" type="email" class="validate" name="email">
+                <label class="active" for="signup-email">Email</label>
+            </div>
+            <div class="input-field col l12">
+                <input placeholder="Введите ваш День Рождения" id="signup-birthday" type="text" class="datepicker">
+                <label class="active" for="signup-birthday">Birthday</label>
+            </div>
+            <div class="col l6 ">
+                <p>
+                    <label>
+                        <input class="with-gap sex" name="sex" value="male" type="radio" checked />
+                        <span>male</span>
+                    </label>
+                </p>
+                <label>
+                    <input class="with-gap sex" name="sex" value="female" type="radio" />
+                    <span>female</span>
+                </label>
+                </p>
+                <label>
+                    <input class="with-gap sex" name="sex" value="other" type="radio" />
+                    <span>other</span>
+                </label>
+                </p>
+            </div>
+            <div class="col l12 right-align">
+                <button class="waves-effect waves-light btn" id="signup-submit">sign-in</button>
+            </div>
+        </div>
+
     </form>
     <hr>
-    <form method="POST">
-        <div>email: <input type="text" name="email" id="login-email" value="alex@mail.ru"></div>
-        <div>password: <input type="text" name="pass" id="login-pass" value="9988"></div>
-        <input type="submit" value="login" id="login-submit">
+
+
+    <form>
+        <div class="row">
+            <div class="input-field col l12">
+                <input placeholder="Введите ваш email" id="login-email" type="email" class="validate" name="email"
+                    value="">
+                <label class="active" for="login-email">Email</label>
+            </div>
+            <div class="input-field col l12">
+                <input placeholder="Введите ваш пароль" id="login-pass" type="password" name="pass">
+                <label class="active" for="login-pass">Password</label>
+            </div>
+            <div class="col l12 right-align">
+                <button class="waves-effect waves-light btn" id="login-submit">login</button>
+            </div>
+
+        </div>
     </form>
 
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="libs/materialize/js/materialize.min.js"></script>
     <script src="script/ajax.js"></script>
     <script src="script/script.js"></script>
 </body>

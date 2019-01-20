@@ -64,9 +64,9 @@ document.querySelector('#signup-submit').onclick = function (event) { // по к
 function updateUserData(result) { // функция, обрабатывающая ответ сервера
     console.log(result);
     if (result == 1) {
-        chips('Данные успешно обновлены!', 1500)
+        chips('Данные успешно обновлены!', 2000)//вызываем функцию, которая показывает пользовательское всплывающее окно chips
         document.querySelector(".title-user-cabinet__name").innerHTML = document.querySelector('#signup-name').value // перезаписываем новое имя пользователя в заголовок
     } else {
-        chips('Ошибка обновления', 1500)
+        chips('Ошибка обновления', 2000)//вызываем функцию, которая показывает пользовательское всплывающее окно chips
     }
 }
