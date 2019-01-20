@@ -26,7 +26,7 @@
 
 <body>
 
-    <div class="container">
+    <div class="container ">
         <div class="row">
             <div class="col l12 center-align">
                 <h1 class="title-user-cabinet">
@@ -58,7 +58,7 @@
                             <input id="signup-birthday" type="text" class="datepicker">
                             <label class="active" for="signup-birthday">Birthday</label>
                         </div>
-                        <div class="col l12 ">
+                        <div class="col l6 ">
                             <p>
                                 <label>
                                     <input class="with-gap sex" name="sex" value="male" type="radio" checked />
