@@ -1,3 +1,7 @@
+.header {
+  border-bottom: 1px solid #26a69a;
+}
+
 .title-user-cabinet,
 .title__header {
   font-size: 24px;
@@ -27,6 +31,134 @@
 
 /************************************************/
 
-.header{
-  border-bottom: 1px solid #26a69a;
+
+/*Стилизация модального окна */
+.modal-login__wrap {
+  z-index: 1000;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .3);
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
+
+.modal-login {
+  width: 250px;
+  padding: 10px;
+  border-radius: 7px;
+  box-shadow: 1px 1px 5px #000;
+  background: #fff;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  position: relative;
+}
+
+.modal-login__close {
+  position: absolute;
+  right: -23px;
+  top: -23px;
+
+}
+
+.btn-floating.btn-large {
+  width: 46px;
+  height: 46px;
+}
+
+.btn-floating.btn-large i {
+  line-height: 46px;
+}
+
+/***********************************************************************************************/
+
+/*Стилизация слайдера с правилами*/
+.modal-login--slider {
+  width: 370px;
+}
+
+.form-slider {
+  width: 700px;
+  height: 340px;
+  margin-left: 0;
+  transition: all ease 1s;
+}
+
+.left-50,
+.right-50 {
+  width: 50%;
+  float: left;
+  min-height: 50px;
+  padding: 10px;
+}
+
+.right-50 {
+  min-height: 50px;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.slider__read-rules,
+.slider__agree-rules label span {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  color: #212121;
+}
+
+[type="checkbox"]+span:not(.lever){
+  font-size: 13px;
+  color:#212121;
+  
+}
+
+.slider__read-rules:hover{
+  text-decoration: underline;
+}
+
+.slider__read-rules-back {
+    background-repeat: no-repeat;
+  background-position: 40px 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  color: #212121;
+}
+
+.slider__read-rules-back:hover{
+  text-decoration: underline;
+}
+
+.form-slider__wrap {
+  overflow: hidden;
+}
+/********************************************************************************************/

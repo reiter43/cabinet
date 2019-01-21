@@ -32,7 +32,7 @@
                     Личный кабинет пользователя <span class="title-user-cabinet__name"></span>
                 </h1>
                 <button id="logout" class="waves-effect waves-light btn ">
-                    <i class="material-icons right">send</i>
+                    <i class="material-icons right">exit_to_app</i>
                     logout
                 </button>
             </div>

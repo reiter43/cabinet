@@ -22,80 +22,146 @@
             <div class="row">
                 <div class="col l10">
                     <h1 class="title__header center-align">Итоговый проект</h1>
-                    <div class="col l2"></div>
+                </div>
+                <div class="col l2">
+                    <button class="modal-show waves-effect waves-light btn" data-modal="#sign-up">sign-in</button>
+                    <button class="modal-show waves-effect waves-light btn" data-modal="#log-in">login</button>
                 </div>
             </div>
         </div>
 
     </header>
 
-    <form>
-        <div class="row">
-            <div class="input-field col l12">
-                <input placeholder="Введите ваше имя" id="signup-name" type="text" class="validate" name="name">
-                <label class="active" for="signup-name">Name</label>
-            </div>
-            <div class="input-field col l12">
-                <input placeholder="Введите ваш пароль" id="signup-pass" type="password" name="pass">
-                <label class="active" for="signup-pass">Password</label>
-            </div>
-            <div class="input-field col l12">
-                <input placeholder="Введите ваш email" id="signup-email" type="email" class="validate" name="email">
-                <label class="active" for="signup-email">Email</label>
-            </div>
-            <div class="input-field col l12">
-                <input placeholder="Введите ваш День Рождения" id="signup-birthday" type="text" class="datepicker">
-                <label class="active" for="signup-birthday">Birthday</label>
-            </div>
-            <div class="col l6 ">
-                <p>
-                    <label>
-                        <input class="with-gap sex" name="sex" value="male" type="radio" checked />
-                        <span>male</span>
-                    </label>
-                </p>
-                <label>
-                    <input class="with-gap sex" name="sex" value="female" type="radio" />
-                    <span>female</span>
-                </label>
-                </p>
-                <label>
-                    <input class="with-gap sex" name="sex" value="other" type="radio" />
-                    <span>other</span>
-                </label>
-                </p>
-            </div>
-            <div class="col l12 right-align">
-                <button class="waves-effect waves-light btn" id="signup-submit">sign-in</button>
+    <div class="modal-login__wrap hide" id="sign-up">
+        <div class="modal-login modal-login--slider">
+            <div class="form-slider__wrap">
+                     <div class="form-slider">
+                <div class="left-50">
+                    <form>
+                        <div class="row">
+                            <div class="input-field col l12">
+                                <input placeholder="Введите ваше имя" id="signup-name" type="text" class="validate"
+                                    name="name">
+                                <label class="active" for="signup-name">Name</label>
+                            </div>
+                            <div class="input-field col l12">
+                                <input placeholder="Введите ваш пароль" id="signup-pass" type="password" name="pass">
+                                <label class="active" for="signup-pass">Password</label>
+                            </div>
+                            <div class="input-field col l12">
+                                <input placeholder="Введите ваш email" id="signup-email" type="email" class="validate"
+                                    name="email">
+                                <label class="active" for="signup-email">Email</label>
+                            </div>
+                            <div class="input-field col l6">
+                                <input placeholder="Введите ваш День Рождения" id="signup-birthday" type="text" class="datepicker">
+                                <label class="active" for="signup-birthday">Birthday</label>
+                            </div>
+                            <div class="col l6 ">
+                                <p>
+                                    <label>
+                                        <input class="with-gap sex" name="sex" value="male" type="radio" checked />
+                                        <span>male</span>
+                                    </label>
+                                </p>
+                                <label>
+                                    <input class="with-gap sex" name="sex" value="female" type="radio" />
+                                    <span>female</span>
+                                </label>
+                                </p>
+                                <label>
+                                    <input class="with-gap sex" name="sex" value="other" type="radio" />
+                                    <span>other</span>
+                                </label>
+                                </p>
+                            </div>
+                            <div class="col l6">
+                                    <p class="slider__agree-rules">
+                                            <label>
+                                              <input type="checkbox" class="filled-in" id="slider__checkbox" />
+                                              <span>Принять правила</span>
+                                            </label>
+                                          </p>
+                            </div>
+                            <div class="col l6">
+                                <p class="slider__read-rules">
+                                    <i class="material-icons left">filter_list</i>Читать правила
+                                </p>
+                            </div>
+                                
+                            
+                            <div class="col l12 right-align">
+                                <button class="waves-effect waves-light btn disabled" id="signup-submit">sign-in
+                                    <i class="material-icons right">account_box</i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <button class="modal-login__close btn-floating btn-large waves-effect waves-light grey darken-1">
+                            <i class="material-icons">close</i>
+                        </button>
+                </div>
+                <div class="right-50">
+                    <p class="slider__read-rules-back right-align"><i class="material-icons right">keyboard_return</i>Back</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolores odio nobis omnis.
+                        Dolor,
+                        impedit? Eaque enim illum at. </p>
+                    <p>Exercitationem unde aperiam soluta minus aliquid at deleniti quas facilis
+                        ipsam.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolores odio nobis omnis.
+                        Dolor,
+                        impedit? Eaque enim illum at. </p>
+                    <p>Exercitationem unde aperiam soluta minus aliquid at deleniti quas facilis
+                        ipsam.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolores odio nobis omnis.
+                        Dolor,
+                        impedit? Eaque enim illum at. </p>
+                    <p>Exercitationem unde aperiam soluta minus aliquid at deleniti quas facilis
+                        ipsam.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolores odio nobis omnis.
+                        Dolor,
+                        impedit? Eaque enim illum at. </p>
+                    <p>Exercitationem unde aperiam soluta minus aliquid at deleniti quas facilis
+                        ipsam.</p>
+                    <p class="slider__read-rules-back right-align"><i class="material-icons right">keyboard_return</i>Back </p>
+                </div>
             </div>
         </div>
-
-    </form>
-    <hr>
-
-
-    <form>
-        <div class="row">
-            <div class="input-field col l12">
-                <input placeholder="Введите ваш email" id="login-email" type="email" class="validate" name="email"
-                    value="">
-                <label class="active" for="login-email">Email</label>
             </div>
-            <div class="input-field col l12">
-                <input placeholder="Введите ваш пароль" id="login-pass" type="password" name="pass">
-                <label class="active" for="login-pass">Password</label>
-            </div>
-            <div class="col l12 right-align">
-                <button class="waves-effect waves-light btn" id="login-submit">login</button>
-            </div>
+       
+    </div>
 
+
+    <div class="modal-login__wrap hide" id="log-in">
+        <div class="modal-login">
+            <form>
+                <div class="row">
+                    <div class="input-field col l12">
+                        <input placeholder="Введите ваш email" id="login-email" type="email" class="validate" name="email"
+                            value="">
+                        <label class="active" for="login-email">Email</label>
+                    </div>
+                    <div class="input-field col l12">
+                        <input placeholder="Введите ваш пароль" id="login-pass" type="password" name="pass">
+                        <label class="active" for="login-pass">Password</label>
+                    </div>
+                    <div class="col l12 right-align">
+                        <button class="waves-effect waves-light btn" id="login-submit"><i class="material-icons right">account_circle</i>login</button>
+                    </div>
+                </div>
+            </form>
+            <button class="modal-login__close btn-floating btn-large waves-effect waves-light grey darken-1">
+                <i class="material-icons">close</i>
+            </button>
         </div>
-    </form>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="libs/materialize/js/materialize.min.js"></script>
     <script src="script/ajax.js"></script>
     <script src="script/script.js"></script>
+    <script src="script/modal.js"></script>
+    <script src="script/rules_slider.js"></script>
 </body>
 
 </html>
