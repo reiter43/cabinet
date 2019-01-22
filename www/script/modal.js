@@ -7,25 +7,41 @@ function showModal() { // функция, открывающая модальн�
   document.querySelector(modalId).classList.remove('hide');
   document.onkeydown = function (event) {
     //закрываем окно на кнопку Esc
-    if (event.keyCode == 27) closeModal();
+    if (event.keyCode == 27) {
+       closeModal();
+       clearForm(); // функция очистки формы
+    }
   }
 }
 
 document.querySelectorAll('.modal-login__close').forEach(function (element) {
   //закрываем окно на кнопке закрыть
-  element.onclick = closeModal;
-});
+  element.onclick = function () {
+    closeModal();
+    clearForm(); // функция очистки формы
+  }
+})
 
 document.querySelectorAll('.modal-login__wrap').forEach(function (element) {
   //закрываем окно на клике в области серой
-  element.onclick = closeModal;
-});
+  element.onclick = function () {
+    closeModal();
+    clearForm(); // функция очистки формы
+  }
+})
 
 function closeModal() { // функция, закрывающая модальное окно 
   document.querySelectorAll('.modal-login__wrap').forEach(function (element) {
     element.classList.add('hide');
   });
   document.onkeydown = null;
+}
+
+function clearForm() { // очищаем форму, присваивая ее полям пустые значения
+  document.querySelector('#signup-name').value = '';
+  document.querySelector('#signup-pass').value = '';
+  document.querySelector('#signup-email').value = '';
+  document.querySelector('#signup-birthday').value = '';
 }
 
 document.querySelector('#log-in .modal-login').onclick = function (event) {
